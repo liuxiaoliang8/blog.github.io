@@ -1,36 +1,16 @@
-sass:
-  style: compressed
+name: Jekyll Themes
+url: http://matt.harzewski.com
+description: Insert tagline here
 
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  -
-    scope:
-      path: "assets/img"
-    values:
-      image: true
+permalink: /themes/:title/
 
-title: Minimalism
-name: minimalism
-description: Minimalism is a jekyll theme for minimalist
+plugins: [jekyll-paginate]
 
-github: https://github.com/showzeng/Minimalism
-rss: true
+highlighter: pygments
+paginate: 20
 
-plugins:
-  - rouge
-  - kramdown
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jemoji
+markdown: rdiscount
+rdiscount:
+    extensions: ['smart']
 
-exclude:
-  - script
-  - docs
-  - vendor
-  - Gemfile
-  - Gemfile.lock
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'vendor']
